@@ -3,99 +3,100 @@
     "cp1": { "code": "CP-S1", "year": "Year 1", "units": [
       { "code": "UEF 1.1 · CS Fundamentals", "courses": [
         { "id": "cp1-fdsa", "title": "Fundamental Data Structures and Algorithms", "pre": [] },
-        { "id": "cp1-carchf", "title": "Computer Architecture: Fundamentals", "pre": [] }
+        { "id": "cp1-farc", "title": "Computer Architecture Fundamentals", "pre": [] }
       ]},
-      { "code": "UEF 1.2 · Mathematics", "courses": [
-        { "id": "cp1-algst", "title": "Algebraic Structures", "pre": [] },
-        { "id": "cp1-srvdc", "title": "Single Real Variable Functions and Differential Calculus", "pre": [] }
+      { "code": "UEF 1.2 · Mathematics for Engineers", "courses": [
+        { "id": "cp1-baalg", "title": "Basic Abstract Algebra", "pre": [] },
+        { "id": "cp1-srvc", "title": "Single Real Variable Functions and Differential Calculus", "pre": [] }
       ]},
-      { "code": "UEM 1.1 · Mathematics", "courses": [
-        { "id": "cp1-genelec", "title": "General Electronics", "pre": [] }
+      { "code": "UEM 1.1 · Mathematics for Engineers", "courses": [
+        { "id": "cp1-belec", "title": "Basic Electronics 1", "pre": [] }
       ]},
       { "code": "UET 1.1 · SHSE", "courses": [
         { "id": "cp1-awps", "title": "Academic Writing and Public Speaking", "pre": [] }
       ]},
       { "code": "UED 1.1 · SHSE", "courses": [
-        { "id": "cp1-dail", "title": "Digital & AI Literacy", "pre": [] }
+        { "id": "cp1-dail", "title": "Digital & AI Literacy", "pre": [] },
+        { "id": "cp1-dcit", "title": "Digital & AI Citizenship", "pre": [] }
       ]}
     ]},
 
     "cp2": { "code": "CP-S2", "year": "Year 1", "units": [
       { "code": "UEF 2.1 · CS Fundamentals", "courses": [
-        { "id": "cp2-ads", "title": "Advanced Data Structures", "pre": ["cp1-fdsa"] },
-        { "id": "cp2-asm", "title": "Assembly Language", "pre": ["cp1-carchf"] },
-        { "id": "cp2-linux", "title": "Linux System Foundations", "pre": ["cp1-carchf"] }
+        { "id": "cp2-adds", "title": "Advanced Data Structures", "pre": ["cp1-fdsa", "cp1-baalg", "cp1-srvc"] },
+        { "id": "cp2-assl", "title": "Assembly Language", "pre": ["cp1-fdsa", "cp1-farc"] },
+        { "id": "cp2-flin", "title": "Linux System Foundations", "pre": ["cp1-farc"] }
       ]},
-      { "code": "UEF 2.2 · Mathematics", "courses": [
-        { "id": "cp2-linalg", "title": "Linear Algebra", "pre": ["cp1-algst"] },
-        { "id": "cp2-orvic", "title": "One Real Variable Functions and Integral Calculus", "pre": ["cp1-srvdc"] }
+      { "code": "UEF 2.2 · Mathematics for Engineers", "courses": [
+        { "id": "cp2-lalg", "title": "Linear Algebra 1", "pre": ["cp1-baalg", "cp1-srvc"] },
+        { "id": "cp2-ofic", "title": "One Real Variable Functions and Integral Calculus", "pre": ["cp1-baalg", "cp1-srvc"]}
       ]},
-      { "code": "UEM 2.1 · Mathematics", "courses": [
-        { "id": "cp2-digelec", "title": "Digital Electronics", "pre": ["cp1-genelec"] }
+      { "code": "UEM 2.1 · Mathematics for Engineers", "courses": [
+        { "id": "cp2-elec", "title": "Basic Electronics 2", "pre": ["cp1-belec"] }
       ]},
       { "code": "UET 2.1 · SHSE", "courses": [
         { "id": "cp2-aawps", "title": "Advanced Academic Writing and Public Speaking", "pre": ["cp1-awps"] },
-        { "id": "cp2-intorg", "title": "Introduction to Organizations", "pre": [] }
+        { "id": "cp2-iorga", "title": "Introduction to Organizations", "pre": [] }
       ]},
       { "code": "UED 2.1 · SHSE", "courses": [
-        { "id": "cp2-digecon", "title": "Digital Economy", "pre": [] }
+        { "id": "cp2-deco", "title": "Digital Economy", "pre": ["cp1-dail", "cp1-dcit"] }
       ]}
     ]},
 
     "cp3": { "code": "CP-S3", "year": "Year 2", "units": [
       { "code": "UEF 3.1 · CS Fundamentals", "courses": [
-        { "id": "cp3-oop", "title": "Object Oriented Programming", "pre": ["cp2-ads"] },
-        { "id": "cp3-carchd", "title": "Computer Architecture Design", "pre": ["cp1-carchf", "cp2-asm"] },
-        { "id": "cp3-fseds", "title": "File Structures and External Data Structures", "pre": ["cp2-ads"] }
+        { "id": "cp3-oop", "title": "Object Oriented Programming", "pre": ["cp1-fdsa", "cp2-adds"] },
+        { "id": "cp3-carchd", "title": "Computer Architecture Design", "pre": ["cp1-farc"] },
+        { "id": "cp3-fseds", "title": "File Structures and External Data Structures", "pre": ["cp2-adds", "cp2-flin"] }
       ]},
-      { "code": "UEF 3.2 · Mathematics", "courses": [
-        { "id": "cp3-mlalg", "title": "Multilinear Algebra", "pre": ["cp2-linalg"] },
-        { "id": "cp3-sfsv", "title": "Series and Functions of Several Variables", "pre": ["cp2-orvic"] },
-        { "id": "cp3-pds", "title": "Probability and Descriptive Statistics", "pre": ["cp2-orvic"] }
+      { "code": "UEF 3.2 · Mathematics for Engineers", "courses": [
+        { "id": "cp3-mlalg", "title": "Linear Algebra 2", "pre": ["cp2-lalg", "cp2-ofic"] },
+        { "id": "cp3-sfsv", "title": "Series and Functions of Several Variables", "pre": ["cp2-lalg", "cp2-ofic"] },
+        { "id": "cp3-pds", "title": "Probability and Descriptive Statistics", "pre": ["cp2-lalg", "cp2-ofic", "cp3-mlalg", "cp3-sfsv"] }
       ]},
-      { "code": "UEM 3.1 · Mathematics", "courses": [
-        { "id": "cp3-dace", "title": "Data Acquisition and Communication Electronics", "pre": ["cp2-digelec"] }
+      { "code": "UEM 3.1 · Mathematics for Engineers", "courses": [
+        { "id": "cp3-dace", "title": "Data Acquisition and Communication Electronics", "pre": ["cp1-farc", "cp2-elec"] }
       ]},
       { "code": "UET 3.1 · SHSE", "courses": [
         { "id": "cp3-csmil", "title": "Communication Skills, Media and Information Literacy", "pre": ["cp2-aawps"] }
       ]},
       { "code": "UED 3.1 · SHSE", "courses": [
-        { "id": "cp3-wpi", "title": "Workplace Immersion", "pre": [] }
+        { "id": "cp3-wpi", "title": "Workplace Immersion", "pre": ["cp2-deco"] }
       ]}
     ]},
 
     "cp4": { "code": "CP-S4", "year": "Year 2", "units": [
       { "code": "UEF 4.1 · CS Fundamentals", "courses": [
-        { "id": "cp4-dbf", "title": "Databases: Fundamentals", "pre": ["cp3-fseds"] },
-        { "id": "cp4-isf", "title": "Information Systems Fundamentals", "pre": ["cp2-intorg"] }
+        { "id": "cp4-dbf", "title": "Databases: Fundamentals", "pre": ["cp1-baalg", "cp3-fseds"] },
+        { "id": "cp4-isf", "title": "Information Systems Fundamentals", "pre": ["cp2-iorga"] }
       ]},
-      { "code": "UEF 4.2 · Mathematics", "courses": [
-        { "id": "cp4-iomf", "title": "Integral and Optimization of Multivariable Functions", "pre": ["cp3-sfsv"] },
-        { "id": "cp4-mlogic", "title": "Mathematical Logic", "pre": ["cp1-algst"] },
-        { "id": "cp4-ecis", "title": "Elements of Convergence and Inferential Statistics", "pre": ["cp3-pds"] }
+      { "code": "UEF 4.2 · Mathematics for Engineers", "courses": [
+        { "id": "cp4-iomf", "title": "Integral and Optimization of Multivariable Functions", "pre": ["cp2-lalg", "cp2-ofic", "cp3-sfsv"] },
+        { "id": "cp4-mlogic", "title": "Mathematical Logic", "pre": ["cp1-baalg"] },
+        { "id": "cp4-ecis", "title": "Elements of Convergence and Inferential Statistics", "pre": ["cp3-mlalg", "cp3-sfsv", "cp3-pds", "cp4-iomf"] }
       ]},
-      { "code": "UEM 4.1 · Mathematics", "courses": [
-        { "id": "cp4-galo", "title": "Graph Algorithms and Linear Optimization", "pre": ["cp2-ads", "cp2-linalg"] }
+      { "code": "UEM 4.1 · Mathematics for Engineers", "courses": [
+        { "id": "cp4-galo", "title": "Graph Algorithms and Linear Optimization", "pre": ["cp2-adds", "cp2-lalg", "cp4-iomf", "cp4-mlogic"] }
       ]},
       { "code": "UEM 4.2 · CS Fundamentals", "courses": [
-        { "id": "cp4-techproj", "title": "Technical Project", "pre": ["cp3-oop", "cp4-dbf"] }
+        { "id": "cp4-techproj", "title": "Technical Project", "pre": ["cp3-fseds", "cp3-oop", "cp4-dbf"] }
       ]},
       { "code": "UET 4.1 · SHSE", "courses": [
         { "id": "cp4-csce", "title": "Communication Skills for Career Entry", "pre": ["cp3-csmil"] }
       ]},
       { "code": "UED 4.1 · SHSE", "courses": [
-        { "id": "cp4-entinit", "title": "Entrepreneurship Initiation", "pre": ["cp2-digecon"] }
+        { "id": "cp4-entinit", "title": "Entrepreneurship Initiation", "pre": ["cp3-wpi"] }
       ]}
     ]},
 
     "cs1": { "code": "CS-S1", "year": "Year 3", "units": [
       { "code": "UEF 1.1 · Systems & Networks", "courses": [
-        { "id": "cs1-netcom", "title": "Network Communication", "pre": ["cp3-carchd"] },
-        { "id": "cs1-cosf", "title": "Centralized Operating Systems: Foundations", "pre": ["cp3-carchd", "cp2-linux"] }
+        { "id": "cs1-netcom", "title": "Network Communication", "pre": ["cp2-elec", "cp3-carchd", "cp3-dace"] },
+        { "id": "cs1-cosf", "title": "Centralized Operating Systems: Foundations", "pre": ["cp3-carchd", "cp2-flin", "cp2-assl", "cp2-adds"] }
       ]},
       { "code": "UEF 1.2 · Software Analysis & Dev", "courses": [
-        { "id": "cs1-sef", "title": "Software Engineering: Fundamentals", "pre": ["cp3-oop"] },
-        { "id": "cs1-atflc", "title": "Automata Theory, Formal Languages, and Computability", "pre": ["cp4-mlogic"] }
+        { "id": "cs1-sef", "title": "Software Engineering: Fundamentals", "pre": ["cp3-oop", "cp2-adds", "cp3-fseds"] },
+        { "id": "cs1-atflc", "title": "Automata Theory, Formal Languages, and Computability", "pre": ["cp4-mlogic", "cp4-iomf", "cp3-mlalg", "cp3-oop", "cp2-adds", "cp3-fseds"] }
       ]},
       { "code": "UEF 1.3 · People, Orgs & Society", "courses": [
         { "id": "cs1-isa", "title": "Information Systems Analysis", "pre": ["cp4-isf"] }
@@ -107,8 +108,8 @@
         { "id": "cs1-da", "title": "Data Analysis", "pre": ["cp3-pds", "cp4-ecis"] }
       ]},
       { "code": "UET 1.1 · SHSE", "courses": [
-        { "id": "cs1-doo", "title": "Dynamics of Organizations", "pre": ["cp2-intorg"] },
-        { "id": "cs1-facf", "title": "Fundamentals of Accounting, Costing and Finance", "pre": [] }
+        { "id": "cs1-doo", "title": "Dynamics of Organizations", "pre": ["cp2-iorga", "cp2-deco"] },
+        { "id": "cs1-facf", "title": "Fundamentals of Accounting, Costing and Finance", "pre": ["cp2-iorga", "cp4-isf", "cp4-ecis"] }
       ]}
     ]},
 
@@ -119,193 +120,193 @@
         { "id": "cs2-acos", "title": "Advanced Centralized Operating Systems", "pre": ["cs1-cosf"] }
       ]},
       { "code": "UEF 2.2 · People, Orgs & Society", "courses": [
-        { "id": "cs2-issg", "title": "Information Systems Strategy & Governance", "pre": ["cs1-isa"] }
+        { "id": "cs2-issg", "title": "Information Systems Strategy & Governance", "pre": ["cs1-doo", "cp2-iorga", "cp4-isf"] }
       ]},
-      { "code": "UEF 2.3 · Mathematics", "courses": [
-        { "id": "cs2-na", "title": "Numerical Analysis", "pre": ["cp4-iomf"] }
+      { "code": "UEF 2.3 · Mathematics for Engineers", "courses": [
+        { "id": "cs2-na", "title": "Numerical Analysis", "pre": ["cp4-iomf", "cp3-mlalg", "cp3-sfsv"] }
       ]},
       { "code": "UEM 2.1 · Data & Intelligence", "courses": [
-        { "id": "cs2-iml", "title": "Introduction to Machine Learning", "pre": ["cs1-da", "cp2-linalg"] }
+        { "id": "cs2-iml", "title": "Introduction to Machine Learning", "pre": ["cs1-da", "cs2-na", "cp3-oop"] }
       ]},
       { "code": "UEM 2.2 · SHSE", "courses": [
-        { "id": "cs2-pmf", "title": "Project Management Fundamentals", "pre": ["cp4-techproj"] }
+        { "id": "cs2-pmf", "title": "Project Management Fundamentals", "pre": ["cs1-sef", "cp4-techproj", "cp2-iorga"] }
       ]},
       { "code": "UET 2.1 · Systems & Networks", "courses": [
-        { "id": "cs2-iitsec", "title": "Introduction to IT Security", "pre": ["cs1-cosf"] }
+        { "id": "cs2-iitsec", "title": "Introduction to IT Security", "pre": ["cs1-cosf", "cp3-mlalg"] }
       ]},
       { "code": "UET 2.2 · SHSE", "courses": [
-        { "id": "cs2-cdp", "title": "Cross-Domain Project", "pre": ["cp4-techproj"] }
+        { "id": "cs2-cdp", "title": "Cross-Domain Project", "pre": ["cs2-pmf", "cs1-sef", "cp4-techproj"] }
       ]}
     ]},
 
-    "it3": { "code": "2CSSIT-S3", "year": "Year 4", "units": [
+    "sit3": { "code": "2CSSIT-S3", "year": "Year 4", "units": [
       { "code": "UEF 3.1 · People, Orgs & Society", "courses": [
-        { "id": "it3-dss", "title": "Decision Support Systems", "pre": ["cs2-issg"] }
+        { "id": "sit3-dss", "title": "Decision Support Systems", "pre": ["cp4-isf"] }
       ]},
       { "code": "UEF 3.2 · Data & Intelligence", "courses": [
-        { "id": "it3-atds", "title": "Advanced Topics in Database Systems", "pre": ["cs1-adbs"] }
+        { "id": "sit3-atds", "title": "Advanced Topics in Database Systems", "pre": ["cs1-adbs", "cp3-fseds"] }
       ]},
       { "code": "UEF 3.3 · People, Orgs & Society", "courses": [
-        { "id": "it3-es", "title": "Enterprise Systems", "pre": ["cs2-issg"] },
-        { "id": "it3-bpm", "title": "Business Process Management", "pre": ["cs1-isa"] }
+        { "id": "sit3-es", "title": "Enterprise Systems", "pre": ["cs1-isa", "cp4-isf"] },
+        { "id": "sit3-bpm", "title": "Business Process Management", "pre": ["cs2-issg", "cs1-isa", "cp4-isf"] }
       ]},
       { "code": "UEF 3.4 · Software Analysis & Dev", "courses": [
-        { "id": "it3-esa", "title": "Evolutionary Software Architectures", "pre": ["cs1-sef"] }
+        { "id": "sit3-esa", "title": "Evolutionary Software Architectures", "pre": ["cs1-sef", "cs1-isa", "cs1-adbs"] }
       ]},
       { "code": "UED 3.1 · Data & Intelligence", "courses": [
-        { "id": "it3-edt", "title": "Emerging Disruptive Technologies", "pre": ["cs2-iml"] }
+        { "id": "sit3-edt", "title": "Emerging Disruptive Technologies", "pre": ["cp2-deco", "cs1-doo"] }
       ]},
       { "code": "UED 3.2 · Integration", "courses": [
-        { "id": "it3-shint", "title": "Short Internship", "pre": ["cs2-cdp"] }
+        { "id": "sit3-shint", "title": "Short Internship", "pre": ["cp1-dail", "cp1-dcit", "cp2-iorga", "cs2-issg"] }
       ]}
     ]},
 
-    "it4": { "code": "2CSSIT-S4", "year": "Year 4", "units": [
+    "sit4": { "code": "2CSSIT-S4", "year": "Year 4", "units": [
       { "code": "UEF 4.1 · People, Orgs & Society", "courses": [
-        { "id": "it4-isms", "title": "Information Security Management Systems", "pre": ["cs2-iitsec"] },
-        { "id": "it4-isaud", "title": "Information Systems Auditing", "pre": ["it4-isms", "it3-atds"] }
+        { "id": "sit4-isms", "title": "Information Security Management Systems", "pre": ["cs2-issg", "cs1-doo", "cp4-isf"] },
+        { "id": "sit4-isaud", "title": "Information Systems Auditing", "pre": ["cs2-pmf", "cs2-issg", "cp4-isf"] }
       ]},
       { "code": "UEF 4.2 · People, Orgs & Society", "courses": [
-        { "id": "it4-ea", "title": "Enterprise Architecture", "pre": ["it3-es"] }
+        { "id": "sit4-ea", "title": "Enterprise Architecture", "pre": ["sit3-es", "cs2-issg", "cp4-isf"] }
       ]},
       { "code": "UEF 4.3 · People, Orgs & Society", "courses": [
-        { "id": "it4-kmlo", "title": "Knowledge Management & Learning Organization", "pre": ["it3-es"] },
-        { "id": "it4-krst", "title": "Knowledge Representation & Semantic Technologies", "pre": ["cs1-atflc"] }
+        { "id": "sit4-kmlo", "title": "Knowledge Management & Learning Organization", "pre": ["cs1-doo", "cp2-iorga"] },
+        { "id": "sit4-krst", "title": "Knowledge Representation & Semantic Technologies", "pre": ["cs1-adbs", "cp4-mlogic"] }
       ]},
-      { "code": "UEM 4.1 · Mathematics", "courses": [
-        { "id": "it4-sqs", "title": "Simulation and Queuing Systems", "pre": ["cs2-na"] }
+      { "code": "UEM 4.1 · Mathematics for Engineers", "courses": [
+        { "id": "sit4-sqs", "title": "Simulation and Queuing Systems", "pre": ["cp4-ecis"] }
       ]},
       { "code": "UET 4.1 · Integration", "courses": [
-        { "id": "it4-sitproj", "title": "SIT Multi-course Project", "pre": ["it3-dss", "it3-atds", "it3-esa"] }
+        { "id": "sit4-sitproj", "title": "SIT Multi-course Project", "pre": ["sit3-dss", "sit3-atds", "sit3-es", "sit3-bpm", "sit3-esa", "sit3-edt", "sit3-shint", "sit4-isms", "sit4-isaud", "sit4-ea", "sit4-kmlo", "sit4-krst", "sit4-sqs"] }
       ]}
     ]},
 
-    "il3": { "code": "2CSSIL-S3", "year": "Year 4", "units": [
+    "sil3": { "code": "2CSSIL-S3", "year": "Year 4", "units": [
       { "code": "UEF 3.1 · Software Analysis & Dev", "courses": [
-        { "id": "il3-dp", "title": "Design Patterns", "pre": ["cs1-sef"] }
+        { "id": "sil3-dp", "title": "Design Patterns", "pre": ["cs1-sef", "cs1-isa", "cp3-oop"] }
       ]},
       { "code": "UEF 3.2 · Software Analysis & Dev", "courses": [
-        { "id": "il3-asep", "title": "Advanced Software Engineering Practices", "pre": ["cs1-sef"] }
+        { "id": "sil3-asep", "title": "Advanced Software Engineering Practices", "pre": ["cs2-pmf", "cs1-sef", "cp3-oop"] }
       ]},
       { "code": "UEF 3.3 · Software Analysis & Dev", "courses": [
-        { "id": "il3-sa", "title": "Software Architectures", "pre": ["il3-dp"] }
+        { "id": "sil3-sa", "title": "Software Architectures", "pre": ["sil3-adpp", "cs1-adbs", "cs2-pns", "cs1-sef"] }
       ]},
       { "code": "UEM 3.1 · Software Analysis & Dev", "courses": [
-        { "id": "il3-awd", "title": "Advanced WEB Development", "pre": ["cs1-sef"] }
+        { "id": "sil3-awd", "title": "Advanced WEB Development", "pre": ["sil3-asep", "cp4-techproj", "cp3-oop", "cp3-fseds"] }
       ]},
       { "code": "UEM 3.2 · Software Analysis & Dev", "courses": [
-        { "id": "il3-adpp", "title": "Algorithm Design and Programming Paradigms", "pre": ["cp2-ads"] },
-        { "id": "il3-fle", "title": "Formal Languages Engineering", "pre": ["cs1-atflc"] }
+        { "id": "sil3-adpp", "title": "Algorithm Design and Programming Paradigms", "pre": ["cp2-adds"] },
+        { "id": "sil3-fle", "title": "Formal Languages Engineering", "pre": ["cs1-atflc", "cp4-galo"] }
       ]},
       { "code": "UET 3.1 · Integration", "courses": [
-        { "id": "il3-shint", "title": "Short Internship", "pre": ["cs2-cdp"] }
+        { "id": "sil3-shint", "title": "Short Internship", "pre": ["cp1-dail", "cp1-dcit", "cp2-iorga", "cs2-issg"] }
       ]}
     ]},
 
-    "il4": { "code": "2CSSIL-S4", "year": "Year 4", "units": [
+    "sil4": { "code": "2CSSIL-S4", "year": "Year 4", "units": [
       { "code": "UEF 4.1 · Systems & Networks", "courses": [
-        { "id": "il4-spse", "title": "Software and Protocols Security Engineering", "pre": ["cs2-iitsec", "cs2-pns"] }
+        { "id": "sil4-spse", "title": "Software and Protocols Security Engineering", "pre": ["cs2-iitsec", "cs2-pns", "cs2-acos"] }
       ]},
       { "code": "UEF 4.2 · Software Analysis & Dev", "courses": [
-        { "id": "il4-sqat", "title": "Software Quality Assurance and Testing", "pre": ["il3-asep"] }
+        { "id": "sil4-sqat", "title": "Software Quality Assurance and Testing", "pre": ["cs1-sef", "cs1-isa", "cs1-adbs"] }
       ]},
       { "code": "UEF 4.3 · Software Analysis & Dev", "courses": [
-        { "id": "il4-devops", "title": "DevOps - Continuous Integration and Delivery (CI/CD)", "pre": ["il3-awd"] }
+        { "id": "sil4-devops", "title": "DevOps - Continuous Integration and Delivery (CI/CD)", "pre": ["cp2-flin", "cp4-dbf", "cs1-netcom", "cs1-sef", "cs2-iitsec"] }
       ]},
       { "code": "UEM 4.1 · Software Analysis & Dev", "courses": [
-        { "id": "il4-hci", "title": "Human Computer Interaction", "pre": ["cs1-sef"] }
+        { "id": "sil4-hci", "title": "Human Computer Interaction", "pre": ["cs2-pmf", "cs1-sef"] }
       ]},
       { "code": "UEM 4.2 · SHSE", "courses": [
-        { "id": "il4-see", "title": "Software Engineering Ethics", "pre": ["cs1-sef"] }
+        { "id": "sil4-see", "title": "Software Engineering Ethics", "pre": ["cp1-dail", "cp1-dcit", "cs1-sef", "cs2-pmf"] }
       ]},
       { "code": "UEM 4.3 · Software Analysis & Dev", "courses": [
-        { "id": "il4-mad", "title": "Mobile Applications Development", "pre": ["il3-awd"] }
+        { "id": "sil4-mad", "title": "Mobile Applications Development", "pre": ["cp3-oop", "cp4-dbf", "cs1-netcom", "cs1-sef"] }
       ]},
       { "code": "UET 4.1 · Integration", "courses": [
-        { "id": "il4-seproj", "title": "Software Engineering Project", "pre": ["il3-sa", "il4-sqat", "il4-devops"] }
+        { "id": "sil4-seproj", "title": "Software Engineering Project", "pre": ["sil3-awd", "sil3-sa", "sil3-asep", "cs2-pmf", "cs1-adbs", "cs1-isa", "cs1-sef"] }
       ]}
     ]},
 
-    "id3": { "code": "2CSSID-S3", "year": "Year 4", "units": [
+    "sid3": { "code": "2CSSID-S3", "year": "Year 4", "units": [
       { "code": "UEF 3.1 · Data & Intelligence", "courses": [
-        { "id": "id3-otai", "title": "Optimization Techniques and Artificial Intelligence", "pre": ["cp4-galo"] },
-        { "id": "id3-dl", "title": "Deep Learning", "pre": ["cs2-iml"] }
+        { "id": "sid3-otai", "title": "Optimization Techniques and Artificial Intelligence", "pre": ["cp4-galo"] },
+        { "id": "sid3-dl", "title": "Deep Learning", "pre": ["cs2-iml"] }
       ]},
       { "code": "UEF 3.2 · Data & Intelligence", "courses": [
-        { "id": "id3-daps", "title": "Data Acquisition, Privacy and Security", "pre": ["cs2-iitsec"] },
-        { "id": "id3-cps", "title": "Complexity and Problem Solving", "pre": ["cs1-atflc"] }
+        { "id": "sid3-daps", "title": "Data Acquisition, Privacy and Security", "pre": ["cs2-iitsec"] },
+        { "id": "sid3-cps", "title": "Complexity and Problem Solving", "pre": ["cs1-atflc"] }
       ]},
-      { "code": "UEF 3.3 · Mathematics", "courses": [
-        { "id": "id3-amds", "title": "Advanced Mathematics for Data Science", "pre": ["cp3-mlalg", "cs2-na"] }
+      { "code": "UEF 3.3 · Mathematics for Engineers", "courses": [
+        { "id": "sid3-amds", "title": "Advanced Mathematics for Data Science", "pre": ["cp3-mlalg", "cs2-na"] }
       ]},
       { "code": "UEM 3.1 · Systems & Networks", "courses": [
-        { "id": "id3-hpc", "title": "High Performance Computing", "pre": ["cs2-acarch"] }
+        { "id": "sid3-hpc", "title": "High Performance Computing", "pre": ["cs2-acarch"] }
       ]},
       { "code": "UEM 3.2 · Data & Intelligence", "courses": [
-        { "id": "id3-bdtt", "title": "Big Data Tools and Techniques", "pre": ["cs1-adbs"] }
+        { "id": "sid3-bdtt", "title": "Big Data Tools and Techniques", "pre": ["cs1-adbs"] }
       ]},
       { "code": "UED 3.1 · Integration", "courses": [
-        { "id": "id3-shint", "title": "Short Internship", "pre": ["cs2-cdp"] }
+        { "id": "sid3-shint", "title": "Short Internship", "pre": ["cp1-dail", "cp1-dcit", "cp2-iorga", "cs2-issg"] }
       ]}
     ]},
 
-    "id4": { "code": "2CSSID-S4", "year": "Year 4", "units": [
+    "sid4": { "code": "2CSSID-S4", "year": "Year 4", "units": [
       { "code": "UEF 4.1 · Data & Intelligence", "courses": [
-        { "id": "id4-aml", "title": "Advanced Machine Learning", "pre": ["id3-dl"] },
-        { "id": "id4-tsf", "title": "Time Series Forecasting", "pre": ["cs1-da"] }
+        { "id": "sid4-aml", "title": "Advanced Machine Learning", "pre": ["sid3-dl"] },
+        { "id": "sid4-tsf", "title": "Time Series Forecasting", "pre": ["sid3-dl"] }
       ]},
       { "code": "UEF 4.2 · Data & Intelligence", "courses": [
-        { "id": "id4-krr", "title": "Knowledge Representation and Reasoning", "pre": ["cs1-atflc"] },
-        { "id": "id4-spms", "title": "Stochastic Processes, Models and Simulation", "pre": ["cp4-ecis"] }
+        { "id": "sid4-krr", "title": "Knowledge Representation and Reasoning", "pre": ["sid3-cps"] },
+        { "id": "sid4-spms", "title": "Stochastic Processes, Models and Simulation", "pre": ["cp4-ecis"] }
       ]},
       { "code": "UEF 4.3 · Data & Intelligence", "courses": [
-        { "id": "id4-nlp", "title": "Natural Language Processing", "pre": ["id3-otai", "id3-dl", "id3-cps", "id4-krr", "id4-spms"] }
+        { "id": "sid4-nlp", "title": "Natural Language Processing", "pre": ["sid3-otai", "sid3-dl", "sid3-cps", "sid4-krr", "sid4-spms"] }
       ]},
       { "code": "UEM 4.1 · Software Analysis & Dev", "courses": [
-        { "id": "id4-dcai", "title": "Distributed Computing and Artificial Intelligence", "pre": ["id3-hpc", "id3-otai"] }
+        { "id": "sid4-dcai", "title": "Distributed Computing and Artificial Intelligence", "pre": ["sid3-hpc", "sid3-otai"] }
       ]},
       { "code": "UET 4.1 · Integration", "courses": [
-        { "id": "id4-sidproj", "title": "SID Multidisciplinary Project", "pre": ["id4-aml", "id4-nlp"] }
+        { "id": "sid4-sidproj", "title": "SID Multidisciplinary Project", "pre": ["sid4-aml", "sid4-nlp"] }
       ]}
     ]},
 
-    "ic3": { "code": "2CSSII-S3", "year": "Year 4", "units": [
+    "sii3": { "code": "2CSSII-S3", "year": "Year 4", "units": [
       { "code": "UEF 3.1 · Systems & Networks", "courses": [
-        { "id": "ic3-oni", "title": "Operators' Networks Infrastructure", "pre": ["cs2-pns"] },
-        { "id": "ic3-vcc", "title": "Virtualization and Cloud Computing", "pre": ["cs2-acos"] }
+        { "id": "sii3-oni", "title": "Operators' Networks Infrastructure", "pre": ["cs2-pns"] },
+        { "id": "sii3-vcc", "title": "Virtualization and Cloud Computing", "pre": ["cs2-acos"] }
       ]},
       { "code": "UEF 3.2 · Systems & Networks", "courses": [
-        { "id": "ic3-csf", "title": "Cybersecurity Fundamentals", "pre": ["cs2-iitsec"] },
-        { "id": "ic3-dsnp", "title": "Distributed Systems and Network Programming", "pre": ["cs2-pns"] }
+        { "id": "sii3-csf", "title": "Cybersecurity Fundamentals", "pre": ["cs2-iitsec"] },
+        { "id": "sii3-dsnp", "title": "Distributed Systems and Network Programming", "pre": ["cs2-pns"] }
       ]},
-      { "code": "UEM 3.1 · Mathematics", "courses": [
-        { "id": "ic3-sqs", "title": "Simulation and Queuing Systems", "pre": ["cs2-na"] }
+      { "code": "UEM 3.1 · Mathematics for Engineers", "courses": [
+        { "id": "sii3-sqs", "title": "Simulation and Queuing Systems", "pre": ["cs2-na"] }
       ]},
       { "code": "UET 3.1 · Software Analysis & Dev", "courses": [
-        { "id": "ic3-ce", "title": "Compiler Engineering", "pre": ["cs1-atflc"] }
+        { "id": "sii3-ce", "title": "Compiler Engineering", "pre": ["cs1-atflc"] }
       ]},
       { "code": "UED 3.1 · Integration", "courses": [
-        { "id": "ic3-shint", "title": "Short Internship", "pre": ["cs2-cdp"] }
+        { "id": "sii3-shint", "title": "Short Internship", "pre": ["cp1-dail", "cp1-dcit", "cp2-iorga", "cs2-issg"] }
       ]}
     ]},
 
-    "ic4": { "code": "2CSSII-S4", "year": "Year 4", "units": [
+    "sii4": { "code": "2CSSII-S4", "year": "Year 4", "units": [
       { "code": "UEF 4.1 · Systems & Networks", "courses": [
-        { "id": "ic4-mna", "title": "Mobile Network Architectures", "pre": ["ic3-oni"] },
-        { "id": "ic4-acyber", "title": "Advanced Cybersecurity", "pre": ["ic3-csf"] }
+        { "id": "sii4-mna", "title": "Mobile Network Architectures", "pre": ["sii3-oni"] },
+        { "id": "sii4-acyber", "title": "Advanced Cybersecurity", "pre": ["sii3-csf"] }
       ]},
       { "code": "UEF 4.2 · Software Analysis & Dev", "courses": [
-        { "id": "ic4-dmsa", "title": "Deployment and Monitoring of Software Architectures", "pre": ["ic3-vcc"] },
-        { "id": "ic4-ics", "title": "Intelligent and Communicating System", "pre": ["cs2-iml"] }
+        { "id": "sii4-dmsa", "title": "Deployment and Monitoring of Software Architectures", "pre": ["sii3-vcc"] },
+        { "id": "sii4-ics", "title": "Intelligent and Communicating System", "pre": ["cs2-iml"] }
       ]},
       { "code": "UEF 4.3 · Data & Intelligence", "courses": [
-        { "id": "ic4-atds", "title": "Advanced Topics in Database Systems", "pre": ["cs1-adbs"] }
+        { "id": "sii4-atds", "title": "Advanced Topics in Database Systems", "pre": ["cs1-adbs"] }
       ]},
       { "code": "UET 4.1 · Systems & Networks", "courses": [
-        { "id": "ic4-mmn", "title": "Multimedia Networks", "pre": ["cs2-pns"] }
+        { "id": "sii4-mmn", "title": "Multimedia Networks", "pre": ["cs2-pns"] }
       ]},
       { "code": "UET 4.2 · Integration", "courses": [
-        { "id": "ic4-siqproj", "title": "SIQ Multi-course Project", "pre": ["ic4-acyber", "ic4-dmsa"] }
+        { "id": "sii4-siqproj", "title": "SIQ Multi-course Project", "pre": ["sii4-acyber", "sii4-dmsa"] }
       ]}
     ]}
   },
@@ -317,9 +318,9 @@
   ],
 
   "branches": {
-    "it": ["it3", "it4"],
-    "il": ["il3", "il4"],
-    "id": ["id3", "id4"],
-    "ic": ["ic3", "ic4"]
+    "sit": ["sit3", "sit4"],
+    "sil": ["sil3", "sil4"],
+    "sid": ["sid3", "sid4"],
+    "sii": ["sii3", "sii4"]
   }
 }

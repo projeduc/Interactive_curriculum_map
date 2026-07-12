@@ -58,9 +58,9 @@ function courseDescendants(id){
 // semester-level ancestor/descendant, used only for the speciality pills
 const SEM_EDGES = {
   cp1:['cp2'], cp2:['cp3'], cp3:['cp4'], cp4:['cs1'], cs1:['cs2'],
-  cs2:['it3','il3','id3','ic3'],
-  it3:['it4'], il3:['il4'], id3:['id4'], ic3:['ic4'],
-  it4:[], il4:[], id4:[], ic4:[],
+  cs2:['sit3','sil3','sid3','sii3'],
+  sit3:['sit4'], sil3:['sil4'], sid3:['sid4'], sii3:['sii4'],
+  sit4:[], sil4:[], sid4:[], sii4:[],
 };
 function semAncestors(id){
   const visited = new Set();
@@ -95,10 +95,10 @@ function buildBoard(){
 
   //const branchOrder = ['it', 'il', 'id', 'ic'];
   const branchOrder = [
-    ['it', 'Information Systems and Technologies'],
-    ['il', 'Software Systems Engineering'],
-    ['id', 'Intelligent Systems and Data science'],
-    ['ic', 'Computer Systems and Infrastructure']
+    ['sit', 'Information Systems and Technologies'],
+    ['sil', 'Software Systems Engineering'],
+    ['sid', 'Intelligent Systems and Data science'],
+    ['sii', 'Computer Systems and Infrastructure']
 
   ];
 
