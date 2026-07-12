@@ -17,7 +17,7 @@ async function loadData(){
   for(const [semId, sem] of Object.entries(SEMESTERS)){
     for(const unit of sem.units){
       for(const course of unit.courses){
-        COURSES[course.id] = { ...course, semId };
+        COURSES[course.id] = { ...course, semId, unitCode: unit.code };
       }
     }
   }
@@ -190,9 +190,15 @@ function highlightSpeciality(track){
   const branchSems = BRANCHES[track]; // e.g. ['id3','id4']
 
   // every course that belongs to this speciality's own S3/S4
+  /*
   const branchCourses = new Set(
     Object.values(COURSES).filter(c => branchSems.includes(c.semId)).map(c => c.id)
-  );
+  );*/
+  const branchCourses = new Set(
+    Object.values(COURSES)
+    .filter(c => branchSems.includes(c.semId) && c.unitCode.startsWith('UEF'))
+    .map(c => c.id)
+    );
 
   // the real, course-level prerequisite chain behind every one of those courses
   const ancCourses = new Set();
