@@ -273,17 +273,17 @@
     "sii3": { "code": "2CSSII-S3", "year": "Year 4", "units": [
       { "code": "UEF 3.1 · Systems & Networks", "courses": [
         { "id": "sii3-oni", "title": "Operators' Networks Infrastructure", "pre": ["cs2-pns"] },
-        { "id": "sii3-vcc", "title": "Virtualization and Cloud Computing", "pre": ["cs2-acos"] }
+        { "id": "sii3-vcc", "title": "Virtualization and Cloud Computing", "pre": ["cs2-acos", "cs2-pns"] }
       ]},
       { "code": "UEF 3.2 · Systems & Networks", "courses": [
-        { "id": "sii3-csf", "title": "Cybersecurity Fundamentals", "pre": ["cs2-iitsec"] },
-        { "id": "sii3-dsnp", "title": "Distributed Systems and Network Programming", "pre": ["cs2-pns"] }
+        { "id": "sii3-csf", "title": "Cybersecurity Fundamentals", "pre": ["cs2-iitsec", "cs2-acos", "cs2-pns"] },
+        { "id": "sii3-dsnp", "title": "Distributed Systems and Network Programming", "pre": ["cs2-acos", "cs2-pns", "cs2-acarch", "cp3-oop"] }
       ]},
       { "code": "UEM 3.1 · Mathematics for Engineers", "courses": [
-        { "id": "sii3-sqs", "title": "Simulation and Queuing Systems", "pre": ["cs2-na"] }
+        { "id": "sii3-sqs", "title": "Simulation and Queuing Systems", "pre": ["cp4-ecis"] }
       ]},
       { "code": "UET 3.1 · Software Analysis & Dev", "courses": [
-        { "id": "sii3-ce", "title": "Compiler Engineering", "pre": ["cs1-atflc"] }
+        { "id": "sii3-ce", "title": "Compiler Engineering", "pre": ["cs1-atflc", "cp2-assl"] }
       ]},
       { "code": "UED 3.1 · Integration", "courses": [
         { "id": "sii3-shint", "title": "Short Internship", "pre": ["cp1-dail", "cp1-dcit", "cp2-iorga", "cs2-issg"] }
@@ -292,21 +292,21 @@
 
     "sii4": { "code": "2CSSII-S4", "year": "Year 4", "units": [
       { "code": "UEF 4.1 · Systems & Networks", "courses": [
-        { "id": "sii4-mna", "title": "Mobile Network Architectures", "pre": ["sii3-oni"] },
+        { "id": "sii4-mna", "title": "Mobile Network Architectures", "pre": ["sii3-oni", "sii3-vcc", "cs2-pns"] },
         { "id": "sii4-acyber", "title": "Advanced Cybersecurity", "pre": ["sii3-csf"] }
       ]},
       { "code": "UEF 4.2 · Software Analysis & Dev", "courses": [
-        { "id": "sii4-dmsa", "title": "Deployment and Monitoring of Software Architectures", "pre": ["sii3-vcc"] },
-        { "id": "sii4-ics", "title": "Intelligent and Communicating System", "pre": ["cs2-iml"] }
+        { "id": "sii4-dmsa", "title": "Deployment and Monitoring of Software Architectures", "pre": ["cs1-sef", "cs2-acos", "cs2-pns"] },
+        { "id": "sii4-ics", "title": "Intelligent and Communicating System", "pre": ["cs2-acos", "cs2-pns"] }
       ]},
       { "code": "UEF 4.3 · Data & Intelligence", "courses": [
         { "id": "sii4-atds", "title": "Advanced Topics in Database Systems", "pre": ["cs1-adbs"] }
       ]},
       { "code": "UET 4.1 · Systems & Networks", "courses": [
-        { "id": "sii4-mmn", "title": "Multimedia Networks", "pre": ["cs2-pns"] }
+        { "id": "sii4-mmn", "title": "Multimedia Networks", "pre": ["cs2-pns", "sii3-oni"] }
       ]},
       { "code": "UET 4.2 · Integration", "courses": [
-        { "id": "sii4-siqproj", "title": "SIQ Multi-course Project", "pre": ["sii4-acyber", "sii4-dmsa"] }
+        { "id": "sii4-siqproj", "title": "SIQ Multi-course Project", "pre": ["cs2-pmf", "sii3-oni", "sii3-vcc", "sii3-csf", "sii3-dsnp"] }
       ]}
     ]}
   },
