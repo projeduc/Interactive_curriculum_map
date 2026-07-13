@@ -229,18 +229,18 @@
 
     "sid3": { "code": "2CSSID-S3", "year": "Year 4", "units": [
       { "code": "UEF 3.1 · Data & Intelligence", "courses": [
-        { "id": "sid3-otai", "title": "Optimization Techniques and Artificial Intelligence", "pre": ["cp4-galo"] },
-        { "id": "sid3-dl", "title": "Deep Learning", "pre": ["cs2-iml"] }
+        { "id": "sid3-otai", "title": "Optimization Techniques and Artificial Intelligence", "pre": ["cp4-galo", "cp3-mlalg"] },
+        { "id": "sid3-dl", "title": "Deep Learning", "pre": ["cs1-da", "cs2-iml", "sid3-amds"] }
       ]},
       { "code": "UEF 3.2 · Data & Intelligence", "courses": [
-        { "id": "sid3-daps", "title": "Data Acquisition, Privacy and Security", "pre": ["cs2-iitsec"] },
-        { "id": "sid3-cps", "title": "Complexity and Problem Solving", "pre": ["cs1-atflc"] }
+        { "id": "sid3-daps", "title": "Data Acquisition, Privacy and Security", "pre": ["cs1-sef", "cs2-iml", "cs2-iitsec", "sid3-bdtt"] },
+        { "id": "sid3-cps", "title": "Complexity and Problem Solving", "pre": ["cp4-galo", "cs1-atflc"] }
       ]},
       { "code": "UEF 3.3 · Mathematics for Engineers", "courses": [
-        { "id": "sid3-amds", "title": "Advanced Mathematics for Data Science", "pre": ["cp3-mlalg", "cs2-na"] }
+        { "id": "sid3-amds", "title": "Advanced Mathematics for Data Science", "pre": ["cp3-mlalg", "cp3-sfsv", "cp4-iomf", "cs2-na"] }
       ]},
       { "code": "UEM 3.1 · Systems & Networks", "courses": [
-        { "id": "sid3-hpc", "title": "High Performance Computing", "pre": ["cs2-acarch"] }
+        { "id": "sid3-hpc", "title": "High Performance Computing", "pre": ["cp3-oop", "cs2-acarch", "cs2-acos"] }
       ]},
       { "code": "UEM 3.2 · Data & Intelligence", "courses": [
         { "id": "sid3-bdtt", "title": "Big Data Tools and Techniques", "pre": ["cs1-adbs"] }
@@ -252,21 +252,21 @@
 
     "sid4": { "code": "2CSSID-S4", "year": "Year 4", "units": [
       { "code": "UEF 4.1 · Data & Intelligence", "courses": [
-        { "id": "sid4-aml", "title": "Advanced Machine Learning", "pre": ["sid3-dl"] },
+        { "id": "sid4-aml", "title": "Advanced Machine Learning", "pre": ["sid3-dl", "sid3-amds"] },
         { "id": "sid4-tsf", "title": "Time Series Forecasting", "pre": ["sid3-dl"] }
       ]},
       { "code": "UEF 4.2 · Data & Intelligence", "courses": [
-        { "id": "sid4-krr", "title": "Knowledge Representation and Reasoning", "pre": ["sid3-cps"] },
+        { "id": "sid4-krr", "title": "Knowledge Representation and Reasoning", "pre": ["cp4-ecis", "sid3-cps"] },
         { "id": "sid4-spms", "title": "Stochastic Processes, Models and Simulation", "pre": ["cp4-ecis"] }
       ]},
       { "code": "UEF 4.3 · Data & Intelligence", "courses": [
         { "id": "sid4-nlp", "title": "Natural Language Processing", "pre": ["sid3-otai", "sid3-dl", "sid3-cps", "sid4-krr", "sid4-spms"] }
       ]},
       { "code": "UEM 4.1 · Software Analysis & Dev", "courses": [
-        { "id": "sid4-dcai", "title": "Distributed Computing and Artificial Intelligence", "pre": ["sid3-hpc", "sid3-otai"] }
+        { "id": "sid4-dcai", "title": "Distributed Computing and Artificial Intelligence", "pre": ["cp3-oop", "cp4-ecis", "cs2-na", "cs2-acos", "cs2-pns"] }
       ]},
       { "code": "UET 4.1 · Integration", "courses": [
-        { "id": "sid4-sidproj", "title": "SID Multidisciplinary Project", "pre": ["sid4-aml", "sid4-nlp"] }
+        { "id": "sid4-sidproj", "title": "SID Multidisciplinary Project", "pre": ["cs2-pmf", "sid3-otai", "sid4-aml"] }
       ]}
     ]},
 
