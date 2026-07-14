@@ -7,10 +7,10 @@
   --bone-dim:#9fae9f;
   --gold:#c9a34e;
   --gold-dim:#7d6a3a;
-  --sit:#5aa3cf;
-  --sil:#b98fd1;
-  --sid:#e0946b;
-  --sii:#7fc08f;
+  --it:#5aa3cf;
+  --il:#b98fd1;
+  --id:#e0946b;
+  --ic:#7fc08f;
 }
 *{box-sizing:border-box;}
 html,body{margin:0;padding:0;}
@@ -77,10 +77,10 @@ header.hero p.sub{
 }
 .pill:hover{ border-color:var(--gold); transform:translateY(-1px); }
 .pill .swatch{ width:9px; height:9px; border-radius:50%; display:inline-block; }
-.pill[data-track="sit"] .swatch{ background:var(--sit); }
-.pill[data-track="sil"] .swatch{ background:var(--sil); }
-.pill[data-track="sid"] .swatch{ background:var(--sid); }
-.pill[data-track="sii"] .swatch{ background:var(--sii); }
+.pill[data-track="it"] .swatch{ background:var(--it); }
+.pill[data-track="il"] .swatch{ background:var(--il); }
+.pill[data-track="id"] .swatch{ background:var(--id); }
+.pill[data-track="ic"] .swatch{ background:var(--ic); }
 .pill.active{ border-color:var(--gold); background:var(--panel-raised); box-shadow:inset 0 0 0 1px var(--gold); }
 .pill.reset{ margin-left:auto; color:var(--bone-dim); border-style:dashed; }
 
@@ -127,16 +127,6 @@ header.hero p.sub{
   flex:0 0 auto;
 }
 
-/*.stack-label{
-  font-family:'JetBrains Mono', monospace;
-  font-size:10.5px;
-  letter-spacing:.1em;
-  text-align:center;
-  color:var(--bone-dim);
-  padding-bottom:8px;
-  text-transform:uppercase;
-}*/
-
 .stack-label{
   font-family:'JetBrains Mono', monospace;
   font-size:10.5px;
@@ -147,14 +137,12 @@ header.hero p.sub{
   text-transform:uppercase;
   background:none;
   border:none;
+  width:100%;
+  cursor:pointer;
+  transition:color .15s ease;
 }
-
-button.stack-label{
-    cursor:pointer;
-    color:var(--bone-dim);
-}
-button.stack-label:hover{ color:var(--gold); }
-button.stack-label.active{ color:var(--gold); }
+.stack-label:hover{ color:var(--gold); }
+.stack-label.active{ color:var(--gold); }
 
 .connector{
   width:16px;
@@ -261,36 +249,6 @@ footer{
   color:var(--bone-dim);
 }
 
-@media (max-width: 768px){
+@media (max-width: 640px){
   header.hero, .legend, .note, .board, footer{ padding-left:18px; padding-right:18px; }
-
-  .board{ overflow-x:visible; padding-top:20px; }
-
-  .track-row{
-    flex-direction:column;
-    min-width:0;
-    gap:8px;
-  }
-
-  .stack-col{ width:100%; }
-
-  /* the dashed line that separated trunk from branches becomes a horizontal rule */
-  .connector{
-    width:100%;
-    min-height:0;
-    height:1px;
-    margin:12px 0 20px;
-  }
-  .connector::before{
-    top:0; left:0; right:0;
-    border-top:1px dashed var(--rule);
-  }
-
-  .sem{ padding:12px 12px 14px; }
-}
-
-@media (max-width: 420px){
-  h1{ font-size:26px; }
-  .pill{ font-size:11px; padding:8px 12px; }
-  .course{ font-size:12.2px; }
 }
